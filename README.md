@@ -39,9 +39,9 @@ Users should be able to:
 
 ### Built with
 
--HTML5
--CSS3
--JavaScript - ES6
+- HTML5
+- CSS3
+- JavaScript - ES6
 
 
 ### What We learned
