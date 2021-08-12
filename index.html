@@ -24,42 +24,49 @@
 
         <div class="bill">
           <h2>Bill</h2>
-          <input type="text" placeholder="$">
+          <input type="text" value="0">
         </div>
 
-        <div class="Select-tip">
+        <div class="select-tip">
           <h2>Select Tip %</h2>
           <div class="buttons">
-            <button>5%</button>
-            <button>10%</button>
-            <button>15%</button>
-            <button>25%</button>
-            <button>50%</button>
+            <button value="5">5%</button>
+            <button value="10">10%</button>
+            <button value="15" class="selected">15%</button>
+            <button value="25">25%</button>
+            <button value="50">50%</button>
             <input type="text" id="customTip" name="Custom" placeholder="Custom">
           </div>
         </div>
 
         <div class="peopleNumber">
           <h2>Number of People</h2>
-          <input type="text" placeholder="image">
+          <input type="text">
         </div>
       </div>
 
-      <div class="results">
-        <div class="amount">
-          <h3>Tip Amount</h3>
-          <h4>/ person</h4>
-        </div>
-        <h1>$ 0.00</h1>
+      <div id="results">
 
-        <div class="total">
-          <h3>Total</h3>
-          <h4>/ person</h4>
+        <div class="values">
+          <div class="amount">
+            <div class="title">
+              <h3>Tip Amount</h3>
+              <h4>/ person</h4>
+            </div>
+            <h1>$ 0.00</h1>
+          </div>
+
+          <div class="total">
+            <div class="title">
+              <h3>Total</h3>
+              <h4>/ person</h4>
+            </div>
+            <h1>$ 0.00</h1>
+          </div>
         </div>
-        <h1>$ 0.00</h1>
 
         <div class="reset">
-          <button>Reset</button>
+          <button>RESET</button>
         </div>
       </div>
 
@@ -72,7 +79,7 @@
     Challenge by
     <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"> Frontend Mentor</a>.
     Coded by
-    <a href="#">Antonio and Esther</a>.
+    <a href="#">Antonio</a>.
   </div>
 
   <script src="script.js"></script>
