@@ -79,9 +79,28 @@ section {
     background-image: url('./images/icon-dollar.svg');
     background-position: 10px;
     background-repeat: no-repeat;
+    border-radius: 0.6rem;
+}
+.bill .billInput.error {
+    border: solid 2px #E63946;
+    opacity: 0.8
 }
 
-.select-tip .buttons {
+.bill .titles {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bill .titles h3 {
+    display: none;
+    font-size: 2rem;
+    color: #E63946;
+}
+.bill .titles h3.active {
+    display: block
+}
+
+.select-tip #buttons {
     margin: 2rem 0 5rem 0;
     display: grid;
     grid-template-columns: 12rem 12rem 12rem;
@@ -89,7 +108,7 @@ section {
     gap: 1rem;
 }
 
-.select-tip .buttons button {
+.select-tip #buttons .button {
     transition: .2s;
     background-color: var(--secondary);
     color: var(--white);
@@ -99,19 +118,19 @@ section {
     border-radius: 0.5rem;
     cursor: pointer;
 }
-.select-tip .buttons button:hover {
+.select-tip #buttons .button:hover {
     transition: .2s;
     filter: brightness(1.2);
     background-color: var(--primary);
     color: var(--secondary);
 }
-.select-tip .buttons button.selected {
+.select-tip #buttons .button.selected {
     transition: .2s;
     background-color: var(--primary);
     color: var(--secondary);
 }
 
-.select-tip .buttons input {
+.select-tip #buttons input {
     background-color: var(--cyan25);
     text-align: end;
     padding: 1rem;
@@ -120,11 +139,16 @@ section {
     border-radius: 0.5rem;
     outline: none;
 }
-.select-tip .buttons input::placeholder {
+.select-tip #buttons input::placeholder {
     color: var(--darkCyan);
     font-weight: bold;
     text-align: center;
 }
+
+.select-tip #buttons input.error {
+    border: solid 2px #E63946;
+    opacity: 0.8
+}   
 
 .peopleNumber input {
     background-color: var(--cyan25);
@@ -136,6 +160,26 @@ section {
     background-image: url('./images/icon-person.svg');
     background-position: 10px;
     background-repeat: no-repeat;
+    border-radius: 0.6rem;
+}
+
+.peopleNumber .peopleInput.error {
+    border: solid 2px #E63946;
+    opacity: 0.8
+}
+
+.peopleNumber .titles {
+    display: flex;
+    justify-content: space-between;
+}
+
+.peopleNumber .titles h3 {
+    display: none;
+    font-size: 2rem;
+    color: #E63946;
+}
+.peopleNumber .titles h3.active {
+    display: block
 }
 
 /* Results */

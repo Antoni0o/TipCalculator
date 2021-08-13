@@ -23,25 +23,31 @@
       <div class="calculator">
 
         <div class="bill">
-          <h2>Bill</h2>
-          <input type="text" value="0">
+          <div class="titles">
+            <h2>Bill</h2>
+            <h3>Can't be Zero</h3>
+          </div>
+          <input class="billInput" type="text" value="0">
         </div>
 
         <div class="select-tip">
           <h2>Select Tip %</h2>
-          <div class="buttons">
-            <button value="5">5%</button>
-            <button value="10">10%</button>
-            <button value="15" class="selected">15%</button>
-            <button value="25">25%</button>
-            <button value="50">50%</button>
+          <div id="buttons">
+            <button class="button" value="5">5%</button>
+            <button class="button" value="10">10%</button>
+            <button class="button" value="15">15%</button>
+            <button class="button" value="25">25%</button>
+            <button class="button" value="50">50%</button>
             <input type="text" id="customTip" name="Custom" placeholder="Custom">
           </div>
         </div>
 
         <div class="peopleNumber">
-          <h2>Number of People</h2>
-          <input type="text">
+          <div class="titles">
+            <h2>Number of People</h2>
+            <h3>Can't be Zero</h3>
+          </div>
+          <input class="peopleInput" type="text">
         </div>
       </div>
 
