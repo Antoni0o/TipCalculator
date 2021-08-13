@@ -6,6 +6,7 @@
     --cyan50: hsl(185, 41%, 84%);
     --cyan25: hsl(189, 41%, 97%);
     --white: hsl(0, 0%, 100%);
+    --red: #E63946;
 }
 
 * {
@@ -17,241 +18,301 @@
 }
 
 html {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    
+    background-color: var(--cyan50);
+    
     font-family: 'Space Mono', sans-serif;
     font-size: 62.5%;
-    overflow: hidden;
 }
 
-body {
-    background-color: var(--cyan50);
+a, button, input {
+    font-family: 'Space Mono';
 }
 
-body, button, input, textarea {
-    font-family: 'Space Mono', sans-serif;
-    font-size: clamp(18px, 2.4rem, 4vw);
-}
-
-section {
-    width: 100vw;
-    height: 100vh;
-}
-
-
-/* Areas */
-.container {
-    background-color: var(--cyan50);      
+/* Main */
+main {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20vh;
 }
 
-.box {
-    width: 50vw;
-    height: 50vh;
-    background-color: var(--white);
+/* Box */
+#box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
     display: flex;
-    padding: 2rem;
+    
+    background-color: var(--white);
     border-radius: 3rem;
 }
 
-.attribution {
-    text-align: center;
+/* Calculator */
+#calculator {
+    align-items: center;
+    padding: 3rem;
+    margin: 1rem;
+}
+
+
+
+/* Bill */
+#calculator #bill {
+    margin: 0 0 2rem 0;
+    
+    font-size: 1rem;
+    color: var(--darkCyan)
+}
+
+#calculator #bill .titles {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+#calculator #bill .titles h3 {
+    display: none;
+
+    color: var(--red);
     font-size: 1.2rem;
 }
-
-
-/* Calculator */
-.calculator {
-    margin: 4rem;
-}
-
-.bill {
-    margin-bottom: 2.5rem;
-}
-.bill input {
-    background-color: var(--cyan25);
-    text-align: end;
-    color: var(--secondary);
-    font-weight: bold;
-    padding: 1rem 4rem;
-    outline: none;
-    background-image: url('./images/icon-dollar.svg');
-    background-position: 10px;
-    background-repeat: no-repeat;
-    border-radius: 0.6rem;
-}
-.bill .billInput.error {
-    border: solid 2px #E63946;
-    opacity: 0.8
-}
-
-.bill .titles {
-    display: flex;
-    justify-content: space-between;
-}
-
-.bill .titles h3 {
-    display: none;
-    font-size: 2rem;
-    color: #E63946;
-}
-.bill .titles h3.active {
-    display: block
-}
-
-.select-tip #buttons {
-    margin: 2rem 0 5rem 0;
-    display: grid;
-    grid-template-columns: 12rem 12rem 12rem;
-    grid-template-rows: 5rem 5rem;
-    gap: 1rem;
-}
-
-.select-tip #buttons .button {
-    transition: .2s;
-    background-color: var(--secondary);
-    color: var(--white);
-    font-weight: 700;
-    width: 12rem;
-    height: 5rem;
-    border-radius: 0.5rem;
-    cursor: pointer;
-}
-.select-tip #buttons .button:hover {
-    transition: .2s;
-    filter: brightness(1.2);
-    background-color: var(--primary);
-    color: var(--secondary);
-}
-.select-tip #buttons .button.selected {
-    transition: .2s;
-    background-color: var(--primary);
-    color: var(--secondary);
-}
-
-.select-tip #buttons input {
-    background-color: var(--cyan25);
-    text-align: end;
-    padding: 1rem;
-    color: var(--secondary);
-    font-weight: bold;
-    border-radius: 0.5rem;
-    outline: none;
-}
-.select-tip #buttons input::placeholder {
-    color: var(--darkCyan);
-    font-weight: bold;
-    text-align: center;
-}
-
-.select-tip #buttons input.error {
-    border: solid 2px #E63946;
-    opacity: 0.8
-}   
-
-.peopleNumber input {
-    background-color: var(--cyan25);
-    text-align: end;
-    color: var(--secondary);
-    font-weight: bold;
-    padding: 1rem 4rem;
-    outline: none;
-    background-image: url('./images/icon-person.svg');
-    background-position: 10px;
-    background-repeat: no-repeat;
-    border-radius: 0.6rem;
-}
-
-.peopleNumber .peopleInput.error {
-    border: solid 2px #E63946;
-    opacity: 0.8
-}
-
-.peopleNumber .titles {
-    display: flex;
-    justify-content: space-between;
-}
-
-.peopleNumber .titles h3 {
-    display: none;
-    font-size: 2rem;
-    color: #E63946;
-}
-.peopleNumber .titles h3.active {
-    display: block
-}
-
-/* Results */
-#results {
-    background-color: var(--secondary);
-    width: 60rem;
-    margin: 1rem;
-    padding: 2rem 0.2rem;
-    border-radius: 1.5rem;
-}
-
-#results .title {
+#calculator #bill .titles h3.active {
     display: block;
 }
 
-#results .values {
-    margin: 2rem
+#calculator #bill .billInput {
+    width: 100%;
+    height: 4rem;
+    padding: 2rem;
+    margin: 0.2rem 0 2rem 0;
+    
+    background-color: var(--cyan25);
+    background-image: url('./images/icon-dollar.svg');
+    background-repeat: no-repeat;
+    background-position: 10px;
+    border-radius: 0.5rem;
+    
+    outline-width: 1px;
+    outline-color: var(--primary);
+
+    color: var(--secondary);
+    text-align: end;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+#calculator #bill .billInput.error {
+    outline-color: var(--red);
+    border: 1px solid var(--red);
 }
 
-#results .values .amount {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 2rem;
+
+/* Select Tip */
+#calculator #selectTip h2 {
+    font-size: 1.4rem;
+    color: var(--darkCyan)
 }
 
-#results .values .total {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 2rem;
+#calculator #selectTip #buttons {
+    display: grid;
+    grid-template-columns: 11rem 11rem 11rem;
+    grid-template-rows: 4rem 4rem;
+    gap: 1rem;
+
+    margin: 1rem 0 3rem 0 ;
 }
 
-#results .reset {
-    display: flex;
-    justify-content: center;
-}
+#calculator #selectTip #buttons button {
+    transition: .5s;
+    outline: none;
+    cursor: pointer;
 
-#results .reset button {
-    transition: .2s;
-    margin: 14rem 0;
-    padding: 1.4rem 15rem;
-    border-radius: 0.6rem;
+    background-color: var(--secondary);
+    border: none;
+    border-radius: 0.5rem;
+    
+    color: var(--white);
+    font-family: 'Space Mono', sans-serif;
     font-size: 2rem;
     font-weight: bold;
-    color: var(--secondary);
-    background-color: var(--primary);
-    cursor: pointer;
 }
-#results .reset button:hover {
-    transition: .2s;
+#calculator #selectTip #buttons button:hover {
     filter: brightness(1.2);
+    background-color: var(--primary);
+    
+    color: var(--secondary);
+}
+#calculator #selectTip #buttons button.selected {
+    background-color: var(--primary);
+    
+    color: var(--secondary);
 }
 
-/* Titles & Subtitles */
-h2 {
+#calculator #selectTip #buttons input {
+    padding: 1rem;
+    
+    background-color: var(--cyan25);
+    outline-color: var(--primary);
+    
+    color: var(--secondary);
+    text-align: end;
+    font-weight: bold;
+    font-size: 2rem;
+}
+#calculator #selectTip #buttons input::placeholder {
     color: var(--darkCyan);
+    text-align: center;
+}
+
+
+
+/* People Number*/
+#calculator #peopleNumber {
+    margin: 4rem 0 0 0;
+    
+    font-size: 1rem;
+    color: var(--darkCyan)
+}
+
+#calculator #peopleNumber .titles {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+#calculator #peopleNumber .titles h3 {
+    display: none;
+
+    color: var(--red);
+    font-size: 1.2rem;
+}
+#calculator #peopleNumber .titles h3.active {
+    display: block;
+}
+
+#calculator #peopleNumber .peopleInput {
+    width: 100%;
+    height: 4rem;
+    padding: 2rem;
+    margin: 0.2rem 0 0 0;
+    
+    background-color: var(--cyan25);
+    background-image: url('./images/icon-dollar.svg');
+    background-repeat: no-repeat;
+    background-position: 10px;
+    border-radius: 0.5rem;
+    
+    outline-width: 1px;
+    outline-color: var(--primary);
+
+    color: var(--secondary);
+    text-align: end;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+#calculator #peopleNumber .peopleInput.error {
+    outline-color: var(--red);
+    border: 1px solid var(--red);
+}
+
+
+/* Results */
+#results {
+    text-align: center;
+    padding: 3rem;
+    margin: 2rem;
+    
+    background-color: var(--secondary);
+    border-radius: 2rem;
+    
+    color: var(--white);
+}
+
+#results .values {
+    margin: 1rem 0;
+    
     font-size: 2rem;
 }
 
-h3 {
-    font-size: 1.6rem;
-    color: var(--white)
+
+
+/*Amount*/
+#results .values .amount {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-h4 {
-    font-size: 1.2rem;
+#results .values .amount h1 {
+    margin-left: 7rem;
+    
+    color: var(--primary);
+    font-size: 4rem;
+}
+
+#results .values .amount .title h3 {
+    margin-bottom: .4rem;
+
+    font-size: 1.4rem;
+    text-align: start;
+}
+#results .values .amount .title h4 {
     color: var(--cyan50);
-    opacity: 0.7;
+    font-size: 1.2rem;
+    text-align: start;
 }
 
-h1 {
-    color: var(--primary)
+
+/* Total */
+#results .values .total {
+    margin-bottom: 12rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+#results .values .total h1 {
+    margin-left: 7rem;
+    
+    color: var(--primary);
+    font-size: 4rem;
+}
+
+#results .values .total .title h3 {
+    margin-bottom: .4rem;
+
+    font-size: 1.4rem;
+    text-align: start;
+}
+#results .values .total .title h4 {
+    color: var(--cyan50);
+    font-size: 1.2rem;
+}
+
+
+/* Reset */
+#results .reset button {
+    margin: 0.5rem auto;
+    padding: .8rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    background-color: var(--primary);
+    border-radius: 0.5rem;
+    
+    color: var(--secondary);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Attribution */
+#attribution {
+    margin: 1rem;
+    gap: 0.5rem;
+}

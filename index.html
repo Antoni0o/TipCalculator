@@ -16,21 +16,20 @@
 
 <body>
 
-  <div class="container">
+  <main>
+    <div id="box">
 
-    <div class="box">
+      <section id="calculator">
 
-      <div class="calculator">
-
-        <div class="bill">
+        <div id="bill">
           <div class="titles">
             <h2>Bill</h2>
-            <h3>Can't be Zero</h3>
+            <h3>Invalid Value</h3>
           </div>
-          <input class="billInput" type="text" value="0">
+          <input class="billInput" type="number" value="0">
         </div>
 
-        <div class="select-tip">
+        <div id="selectTip">
           <h2>Select Tip %</h2>
           <div id="buttons">
             <button class="button" value="5">5%</button>
@@ -38,22 +37,24 @@
             <button class="button" value="15">15%</button>
             <button class="button" value="25">25%</button>
             <button class="button" value="50">50%</button>
-            <input type="text" id="customTip" name="Custom" placeholder="Custom">
+            <input type="number" id="customTip" name="Custom" placeholder="Custom">
           </div>
         </div>
 
-        <div class="peopleNumber">
+        <div id="peopleNumber">
           <div class="titles">
             <h2>Number of People</h2>
-            <h3>Can't be Zero</h3>
+            <h3>Invalid Value</h3>
           </div>
-          <input class="peopleInput" type="text">
+          <input class="peopleInput" type="number" value="0">
         </div>
-      </div>
 
-      <div id="results">
+      </section>
+
+      <section id="results">
 
         <div class="values">
+
           <div class="amount">
             <div class="title">
               <h3>Tip Amount</h3>
@@ -69,24 +70,27 @@
             </div>
             <h1>$ 0.00</h1>
           </div>
+
         </div>
 
         <div class="reset">
           <button>RESET</button>
         </div>
-      </div>
+
+      </section>
 
     </div>
 
+    <div id="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"> Frontend Mentor</a>
+      Coded by
+      <a href="#">Antonio</a>
+    </div>
 
-  </div>
+  </main>
 
-  <div class="attribution">
-    Challenge by
-    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"> Frontend Mentor</a>.
-    Coded by
-    <a href="#">Antonio</a>.
-  </div>
+
 
   <script src="script.js"></script>
 </body>

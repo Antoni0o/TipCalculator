@@ -4,10 +4,10 @@
 const inputValidation = {
     billInputValidation() {
         const bill = document.querySelector('.billInput')
-        const errorTitle = document.querySelector('.bill .titles h3')
+        const errorTitle = document.querySelector('#bill .titles h3')
 
         bill.addEventListener("change", (e) => {
-            if (bill.value == '0' || bill.value == undefined || bill.value == '') {
+            if (bill.value <= '0' || bill.value == undefined || bill.value == '') {
                 bill.classList.add('error')
                 errorTitle.classList.add('active')
             } else {
@@ -19,9 +19,9 @@ const inputValidation = {
 
     peopleInputValidation() {
         const people = document.querySelector('.peopleInput')
-        const errorTitle = document.querySelector('.peopleNumber .titles h3')
+        const errorTitle = document.querySelector('#peopleNumber .titles h3')
         people.addEventListener("change", (e) => {
-            if (people.value == '0' || people.value == undefined || people.value == '') {
+            if (people.value <= '0' || people.value == undefined || people.value == '') {
                 people.classList.add('error')
                 errorTitle.classList.add('active')
             } else {
