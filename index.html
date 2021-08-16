@@ -26,7 +26,7 @@
             <h2>Bill</h2>
             <h3>Invalid Value</h3>
           </div>
-          <input class="billInput" type="number" value="0">
+          <input class="billInput" type="number" value="0" min=0>
         </div>
 
         <div id="selectTip">
@@ -37,16 +37,16 @@
             <button class="button" value="15">15%</button>
             <button class="button" value="25">25%</button>
             <button class="button" value="50">50%</button>
-            <input type="number" id="customTip" name="Custom" placeholder="Custom">
+            <input type="number" id="customTip" name="Custom" placeholder="Custom" min=0>
           </div>
         </div>
 
-        <div id="peopleNumber">
+        <div id="people">
           <div class="titles">
             <h2>Number of People</h2>
             <h3>Invalid Value</h3>
           </div>
-          <input class="peopleInput" type="number" value="0">
+          <input class="peopleInput" type="number" value="0" min=0>
         </div>
 
       </section>
@@ -60,7 +60,7 @@
               <h3>Tip Amount</h3>
               <h4>/ person</h4>
             </div>
-            <h1>$ 0.00</h1>
+            <h1>$ <span>0.00</span></h1>
           </div>
 
           <div class="total">
@@ -74,7 +74,7 @@
         </div>
 
         <div class="reset">
-          <button>RESET</button>
+          <button onClick="window.location.reload()">RESET</button>
         </div>
 
       </section>
