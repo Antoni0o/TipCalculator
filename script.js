@@ -14,7 +14,7 @@ function calculateValues(bill, people, button, custom) {
         if(custom.value > 0) {
             const tipValue = ((Number(custom.value)/ 100) * Number(bill.value)).toFixed(2) 
             const amountCalc = tipValue / Number(people.value)
-            const totalCalc = Number(bill.value) + amountCalc
+            const totalCalc = (Number(bill.value) + amountCalc) / Number(people.value)
             const amount = document.querySelector('.amount h1 span')
             const total = document.querySelector('.total h1 span')
             amount.textContent = amountCalc.toFixed(2)
@@ -46,7 +46,6 @@ const Validations = {
     InputValidation(element) {
         const id = element.id
         const input = document.querySelector(`#${id} input`)
-        console.log(id)
         const errorTitle = document.querySelector(`#${id} .titles h3`)
         element.addEventListener("change", (e) => {
             if (input.value <= 0 || input.value == undefined || input.value == '') {
