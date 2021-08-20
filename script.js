@@ -22,7 +22,7 @@ function calculateValues(bill, people, button, custom) {
         } else {
             const tipValue = ((Number(button.value)/ 100) * Number(bill.value)).toFixed(2) 
             const amountCalc = tipValue / Number(people.value)
-            const totalCalc = Number(bill.value) + amountCalc
+            const totalCalc = (Number(bill.value) + amountCalc) / Number(people.value) 
             const amount = document.querySelector('.amount h1 span')
             const total = document.querySelector('.total h1 span')
             amount.textContent = amountCalc.toFixed(2)
