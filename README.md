@@ -1,6 +1,5 @@
 # Frontend Mentor - Tip calculator app solution
 
-NOT CONCLUDED
 This is a solution to the [Tip calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
@@ -27,9 +26,12 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 - Calculate the correct tip and total cost of the bill per person
 
-### Screenshot
+### Screenshots
 
-![](./screenshot.jpg)
+![](./images/screenshot1.png)
+![](./images/screenshot2.png)
+![](./images/screenshot3.png)
+![](./images/screenshot4.png)
 
 ### Links
 
@@ -46,19 +48,19 @@ Users should be able to:
 
 
 ### What I learned
+I've learned more about DOM, and how to connect HTML to JS in various methods.
 
 
 ### Useful resources
 
-- [MDN](https://developer.mozilla.org/) - This is an amazing website which helped us understand more about HTML, CSS and JavaScript tricks. We recommend it to anyone still learning these concepts.
+- [MDN](https://developer.mozilla.org/) - This is an amazing website which helped me to understand more about HTML, CSS and JavaScript tricks. I recommend it to anyone still learning these concepts.
 
 ## Author
-
-### Antonio
 
 - Frontend Mentor - [@Antoni0o](https://www.frontendmentor.io/profile/Antoni0o)
 - GitHub - [@Antoni0o](https://github.com/Antoni0o)
 
 ## Acknowledgments
+In this challenge I learned a lot, but the most important for me was the capacity to find solutions of the problems found in development.
 
 
