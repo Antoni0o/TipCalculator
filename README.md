@@ -6,7 +6,7 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
+  - [Screenshots](#screenshots)
   - [Links](#links)
 - [My process](#our-process)
   - [Built with](#built-with)
@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here]()
-- Live Site URL: [Add live site URL here]()
+- Solution URL: [https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX/hub/pure-html-css-and-js-es6-y_xUuC9wB](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX/hub/pure-html-css-and-js-es6-y_xUuC9wB)
+- Live Site URL: [https://antoni0o-tip-calculator.netlify.app/](https://antoni0o-tip-calculator.netlify.app/)
 
 ## Our process
 
