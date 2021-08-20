@@ -9,27 +9,35 @@ const bill = document.querySelector('#bill'),
 let billValue = 0,
     peopleValue = 0
         
-    function calculateValues(bill, people, button, custom) {
-        if(bill.value > 0 && people.value > 0) {
-            if(custom.value > 0) {
-                const sum = Number(bill.value) + Number(people.value) + Number(custom.value)
-                const amount = document.querySelector('.amount h1 span')
-                amount.textContent = sum
-            } else {
-                const sum = Number(bill.value) + Number(people.value) + Number(button.value)
-                const amount = document.querySelector('.amount h1 span')
-                amount.textContent = sum
-            }
+function calculateValues(bill, people, button, custom) {
+    if(bill.value > 0 && people.value > 0) {
+        if(custom.value > 0) {
+            const tipValue = ((Number(custom.value)/ 100) * Number(bill.value)).toFixed(2) 
+            const amountCalc = tipValue / Number(people.value)
+            const totalCalc = Number(bill.value) + amountCalc
+            const amount = document.querySelector('.amount h1 span')
+            const total = document.querySelector('.total h1 span')
+            amount.textContent = amountCalc.toFixed(2)
+            total.textContent = totalCalc.toFixed(2)
+        } else {
+            const tipValue = ((Number(button.value)/ 100) * Number(bill.value)).toFixed(2) 
+            const amountCalc = tipValue / Number(people.value)
+            const totalCalc = Number(bill.value) + amountCalc
+            const amount = document.querySelector('.amount h1 span')
+            const total = document.querySelector('.total h1 span')
+            amount.textContent = amountCalc.toFixed(2)
+            total.textContent = totalCalc.toFixed(2)
         }
     }
+}
     
-    customTip.addEventListener("click", (e) => {
-        buttons.forEach((btn) => {
-            if (btn.classList.contains('selected')) {
-                    btn.classList.remove('selected')
-            }
-        })
+customTip.addEventListener("click", (e) => {
+    buttons.forEach((btn) => {
+        if (btn.classList.contains('selected')) {
+                btn.classList.remove('selected')
+        }
     })
+})
        
     
 
@@ -95,29 +103,6 @@ const Validations = {
             }
         })
     }
-}
-
-const TipValues = {
-    
-
-    billValue() {
-        let bill = billValue
-        return bill
-    },
-
-    peopleValue() {
-        let people = peopleValue
-        return people
-    },
-
-    
-
-    /*
-        Verificar se todos os valores estão 'corretos' 
-        se todos estiverem corretos, realizar a conta
-    */
-    
-
 }
 
 Validations.InputValidation(bill)

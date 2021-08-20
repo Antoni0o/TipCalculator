@@ -156,13 +156,12 @@ main {
     color: var(--secondary);
 }
 
-#calculator #selectTip #buttons input#customTip {
+#calculator #selectTip #buttons #customTip {
     padding: 1rem;
     
     background-color: var(--cyan25);
     outline-color: var(--primary);
     border-radius: 0.5rem;
-    outline: var(--primary);
     
     color: var(--secondary);
     text-align: end;
@@ -214,7 +213,6 @@ main {
     background-position: 10px;
     border-radius: 0.5rem;
     
-    outline-width: 1px;
     outline-color: var(--primary);
 
     color: var(--secondary);
