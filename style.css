@@ -485,7 +485,7 @@ main {
     }
 }
 
-@media (max-height: 570px) {
+@media (max-height: 630px) {
     #results {
         padding: 1.6rem;
         margin: 0;
