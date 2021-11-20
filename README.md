@@ -38,7 +38,7 @@ Users should be able to:
 - Solution URL: [https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX/hub/pure-html-css-and-js-es6-y_xUuC9wB](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX/hub/pure-html-css-and-js-es6-y_xUuC9wB)
 - Live Site URL: [https://antoni0o-tip-calculator.netlify.app/](https://antoni0o-tip-calculator.netlify.app/)
 
-## Our process
+## My process
 
 ### Built with
 
